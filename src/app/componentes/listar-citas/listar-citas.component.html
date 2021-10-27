@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h2>
+                    Listado de Citas
+                </h2>
+                <p>
+                    A continuación se mostrarán las Citas registradas en el sistema
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Linea</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Propietario</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cita of citas">
+                        
+                         <td>{{cita.fecha}}</td>
+                         <td>{{cita.vehiculo.linea}}</td>
+                         <td>{{cita.vehiculo.placaVehiculo}}</td>
+                         <td>{{cita.propietario.nombre}}</td>
+                         <td>{{cita.propietario.numeroCelular}}</td>
+                         <td>{{cita.descripcion}}</td>
+                         <td>
+                            <button type="button" class="btn btn-primary" (click)="editarPersona(persona)">Editar</button> <button type=" button " class="btn btn-danger " (click)="eliminar(persona) ">Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

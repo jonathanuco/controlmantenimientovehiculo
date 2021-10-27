@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isAthenticated()">
+    <a class="navbar-brand" [routerLink]="['/home']">Sistema de registro de Vehiculos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link active" [routerLink]="['/home']" routerLinkActive="active">Home </a>
+            <a class="nav-link" [routerLink]="['/listar']" routerLinkActive="active">Listar Citas</a>
+            <a class="nav-link" [routerLink]="['/crear']" routerLinkActive="active">Registrar Citas</a>
+        </div>
+    </div>
+
+    <ul class="navbar-nav navbar-right">
+        <li>
+            <a class="btn btn-outline-primary" (click)="logout()">Salir</a>
+        </li>
+    </ul>
+</nav>
